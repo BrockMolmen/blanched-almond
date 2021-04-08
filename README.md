@@ -1,5 +1,3 @@
-# Blanched Almond
-
 ## ![logo](assets/MDLogo.png)
 A color matching game for the 147 known colors you can call in css.
 
