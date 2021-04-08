@@ -1,11 +1,10 @@
-# Blanched Almond
+## ![logo](assets/MDLogo.png)
 
-![logo](assets/MDlogo.png)
 A color matching game for the 147 known colors you can call in css.
 
 ## Motivation
 
-I wanted to build a game that would test and sharpen the players knowledge of the known color names you can call in CSS design. The player will be able to retake the quiz and try to improve on their high score.
+I wanted to build a game that would test and sharpen the players knowledge of the known color names you can call in CSS design. The player will be able to ## retake the quiz and try to improve on their high score.
 
 ---
 
