@@ -1,6 +1,6 @@
 # Blanched Almond
 
-![logo](assets/MDlogo.png)
+## ![logo](assets/MDlogo.png)
 A color matching game for the 147 known colors you can call in css.
 
 ## Motivation
