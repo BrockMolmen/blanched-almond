@@ -96,13 +96,6 @@ h1 {
   font-weight: bolder;
 }
 
-#levelContainer {
-  display: flex;
-  flex-flow: row wrap;
-  width: 65%;
-  justify-content: center;
-}
-
 #colorBox {
   border: 4px outset rgba(69, 69, 69, 0.3);
   border-radius: 50%;
@@ -113,6 +106,12 @@ h1 {
   margin: 10px;
   width: 140px;
   // box-shadow: 2px 3px 7px rgb(161, 161, 161);
+}
+#levelContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 65%;
+  justify-content: center;
 }
 
 input {
