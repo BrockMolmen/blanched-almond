@@ -12,12 +12,12 @@ const level1 = ['cadetblue', 'cyan', 'lightcyan', 'darkcyan', 'teal']
 const level2 = ['coral', 'darkorange', 'gold', 'orange', 'orangered', 'tomato']
 const level3 = ['deeppink', 'hotpink', 'lightpink', 'mediumvioletred', 'palevioletred', 'pink']
 const level4 = ['crimson', 'darkred', 'darksalmon', 'firebrick', 'indianred', 'lightcoral', 'lightsalmon', 'red', 'salmon', 'mistyrose']
-const level5 = ['blue', 'aqua','lightblue','lightskyblue','lightsteelblue','mediumblue','midnightblue','navy','powderblue','royalblue','skyblue','steelblue', 'cornflowerblue', 'darkblue', 'deepskyblue', 'dodgerblue','powderblue']
-const level6 = ['darkkhaki', 'khaki', 'lemonchiffon', 'lightgoldenrodyellow', 'lightyellow', 'moccasin', 'palegoldenrod', 'papayawhip', 'peachpuff', 'yellow']
-const level7 = ['bisque', 'blanchedalmond','brown','burlywood','chocolate','cornsilk','darkgoldenrod','goldenrod','maroon','peru','rosybrown','saddlebrown','sandybrown','sienna','tan']
-const level8 = ['aliceblue','antiquewhite','azure','beige','black','darkgray','dimgray','floralwhite','gainsboro','ghostwhite','gray','honeydew','ivory', 'lavenderblush','lightgray', 'lightslategray', 'linen','mintcream', 'navajowhite', 'oldlace','seashell', 'silver', 'slategray', 'snow', 'wheat', 'white', 'whitesmoke']
-const level9 = ['darkmagenta','darkorchid','darkslateblue','darkviolet','fuchsia','indigo','lavender','magenta','mediumorchid','mediumpurple','mediumslateblue','orchid','plum','purple','rebeccapurple','slateblue','thistle','violet', 'blueviolet']
-const level10 = ['aquamarine', 'chartreuse','darkgreen','darkolivegreen','darkseagreen','forestgreen','green','greenyellow','lawngreen','lightgreen','lime','limegreen','mediumseagreen','mediumspringgreen','olive','olivedrab','palegreen','seagreen','springgreen','yellowgreen', 'darkturquoise','lightseagreen','mediumaquamarine','mediumturquoise','paleturquoise', 'turquoise','darkslategray']
+const level5 = ['darkkhaki', 'khaki', 'lemonchiffon', 'lightgoldenrodyellow', 'lightyellow', 'moccasin', 'palegoldenrod', 'papayawhip', 'peachpuff', 'yellow']
+const level6 = ['bisque', 'blanchedalmond','brown','burlywood','chocolate','cornsilk','darkgoldenrod','goldenrod','maroon','peru','rosybrown','saddlebrown','sandybrown','sienna','tan']
+const level7 = ['blue', 'aqua','lightblue','lightskyblue','lightsteelblue','mediumblue','midnightblue','navy','powderblue','royalblue','skyblue','steelblue', 'cornflowerblue', 'darkblue', 'deepskyblue', 'dodgerblue','powderblue']
+const level8 = ['darkmagenta','darkorchid','darkslateblue','darkviolet','fuchsia','indigo','lavender','magenta','mediumorchid','mediumpurple','mediumslateblue','orchid','plum','purple','rebeccapurple','slateblue','thistle','violet', 'blueviolet']
+const level9 = ['aquamarine', 'chartreuse','darkgreen','darkolivegreen','darkseagreen','forestgreen','green','greenyellow','lawngreen','lightgreen','lime','limegreen','mediumseagreen','mediumspringgreen','olive','olivedrab','palegreen','seagreen','springgreen','yellowgreen', 'darkturquoise','lightseagreen','mediumaquamarine','mediumturquoise','paleturquoise', 'turquoise','darkslategray']
+const level10 = ['aliceblue','antiquewhite','azure','beige','black','darkgray','dimgray','floralwhite','gainsboro','ghostwhite','gray','honeydew','ivory', 'lavenderblush','lightgray', 'lightslategray', 'linen','mintcream', 'navajowhite', 'oldlace','seashell', 'silver', 'slategray', 'snow', 'wheat', 'white', 'whitesmoke']
 
 
 const runGame = {
@@ -124,6 +124,8 @@ const checkScore = () => {
     levelNum++
     if (levelNum === 11) {
         levelNum = 1
+        let directions = document.querySelector(".info")
+        directions.classList.remove('hidden')
     }
 
     //start button text
@@ -135,20 +137,29 @@ const checkScore = () => {
 }
 
 startBtn.addEventListener('click', () => {
-        let rmvBoxes = document.querySelectorAll("#colorBox")
-        for (let cbox of rmvBoxes) {
-        cbox.remove()
-        }
-        let rmvWB = document.querySelectorAll(".choice")
-        for (let word of rmvWB) {
-        word.remove()
-        }
+    if (levelNum === 1) {
+        playerScore = 0
+    }
+    let rmvBoxes = document.querySelectorAll("#colorBox")
+    for (let cbox of rmvBoxes) {
+    cbox.remove()
+    }
+    let rmvWB = document.querySelectorAll(".choice")
+    for (let word of rmvWB) {
+    word.remove()
+    }
+
     runGame.levelSelect()
     runGame.shuffleColors()
     runGame.buildStage()
     runGame.shuffleColors()
     runGame.getPool()
-})
+
+    let directions = document.querySelector(".info")
+    directions.classList.add('hidden')
+
+    }
+)
 
 submitBtn.addEventListener('click', checkScore)
 resetBtn.addEventListener('click', runGame.resetStage)

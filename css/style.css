@@ -30,7 +30,7 @@ header img {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 120px 25px 70px 25px;
+  padding: 170px 25px 70px 25px;
   position: relative;
   overflow: visable;
 }
@@ -38,6 +38,7 @@ header img {
 #poolGrid {
   width: 20%;
   right: 50px;
+  top: 170px;
   position: fixed;
   text-align: left;
 }
@@ -61,22 +62,22 @@ header img {
   color: #ececec;
 }
 
-footer {
+.info {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 70px;
+  justify-content: flex-end;
+  height: 100px;
   width: 100%;
   background-attachment: scroll;
   background-position: 0% 0%;
   position: fixed;
-  bottom: 0;
-  left: 0;
+  top: 90px;
   background-color: #376283;
   padding: 5px 10px 0 10px;
-  z-index: 3;
+  z-index: 2;
   font-size: 18px;
   color: #ececec;
+  transition: 0.5s ease;
 }
 
 h1 {
@@ -163,12 +164,9 @@ ul {
   list-style: none;
 }
 
-.about {
-  font-size: 14px;
-}
-
 .howto {
   display: flex;
+  padding-bottom: 10px;
 }
 
 .yellow {
@@ -181,5 +179,9 @@ ul {
   color: #90ccf4;
   font-weight: 800;
   padding: 0 3px 0 3px;
+}
+
+.hidden {
+  transform: translateY(-70%);
 }
 /*# sourceMappingURL=style.css.map */
