@@ -26,6 +26,11 @@ header img {
   height: 100px;
 }
 
+header h1 {
+  font-size: 76px;
+  font-weight: bolder;
+}
+
 #stageGrid {
   width: 100%;
   display: flex;
@@ -80,18 +85,6 @@ header img {
   transition: 0.5s ease;
 }
 
-h1 {
-  font-size: 76px;
-  font-weight: bolder;
-}
-
-#levelContainer {
-  display: flex;
-  flex-flow: row wrap;
-  width: 65%;
-  justify-content: center;
-}
-
 #colorBox {
   border: 4px outset rgba(69, 69, 69, 0.3);
   border-radius: 50%;
@@ -103,6 +96,13 @@ h1 {
   width: 140px;
 }
 
+#levelContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 65%;
+  justify-content: center;
+}
+
 input {
   background: rgba(69, 69, 69, 0.6);
   border: none;
@@ -112,6 +112,7 @@ input {
   width: 80%;
   margin-top: 55px;
   text-align: center;
+  border-radius: 5px;
 }
 
 input:focus {
@@ -183,5 +184,38 @@ ul {
 
 .hidden {
   transform: translateY(-70%);
+}
+
+@media only screen and (max-width: 1200px) {
+  header img {
+    height: 70px;
+  }
+  header h1 {
+    font-size: 64px;
+    font-weight: bolder;
+  }
+  header #playerScoreContainer {
+    font-size: 45px;
+  }
+  header #button button {
+    font-size: 15px;
+    width: 45%;
+  }
+  .info {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+  }
+  header #buttons {
+    display: flex;
+  }
+  header #buttons button {
+    width: 140px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
