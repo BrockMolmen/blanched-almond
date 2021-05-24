@@ -34,6 +34,10 @@ header {
   img {
     height: 100px;
   }
+  h1 {
+    font-size: 76px;
+    font-weight: bolder;
+  }
 }
 
 #stageGrid {
@@ -82,7 +86,6 @@ header {
   // bottom: 0;
   // left: 0;
   top: 90px;
-
   background-color: #376283;
   padding: 5px 10px 0 10px;
   z-index: 2;
@@ -91,10 +94,6 @@ header {
   transition: 0.5s ease;
 }
 // /* ELEMENT STYLES */
-h1 {
-  font-size: 76px;
-  font-weight: bolder;
-}
 
 #colorBox {
   border: 4px outset rgba(69, 69, 69, 0.3);
@@ -123,6 +122,7 @@ input {
   width: 80%;
   margin-top: 55px;
   text-align: center;
+  border-radius: 5px;
   &:focus {
     outline: none;
   }
@@ -189,4 +189,41 @@ ul {
 
 .hidden {
   transform: translateY(-70%);
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+    img {
+      height: 70px;
+    }
+    h1 {
+      font-size: 64px;
+      font-weight: bolder;
+    }
+    #playerScoreContainer {
+      font-size: 45px;
+    }
+    #button {
+      button {
+        font-size: 15px;
+        width: 45%;
+      }
+    }
+  }
+  .info {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+    #buttons {
+      display: flex;
+      button {
+        width: 140px;
+      }
+    }
+  }
 }
