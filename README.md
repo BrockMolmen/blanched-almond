@@ -25,7 +25,7 @@ I wanted to build a game that would test and sharpen the players knowledge of th
     - Blue - 17 colors
     - Purple - 19 colors
     - Green - 27 colors
-    - Gray - 27 colors
+    - Grey - 27 colors
 - The possible answers will be displayed on the right of the screen
 - Each color has an input box for the player to type their guess
 - Once the player had filled in their answers, they will click "Submit"
