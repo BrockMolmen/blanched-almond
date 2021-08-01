@@ -96,4 +96,4 @@ I wanted to build a game that would test and sharpen the players knowledge of th
 - Mobile layout - switches to a vertical alignment
 - add modals for instructions and game over
 - feature that strikes-through color name options onces they have been used as a guess
-- Sumbit button deactivated until all guesses filled out
+- Submit button deactivated until all guesses filled out
